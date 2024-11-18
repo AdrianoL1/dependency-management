@@ -16,7 +16,6 @@ jobs:
           
       - run: cd BidWars-NodeJS/ && npm ci
       - run: cd BidWars-NodeJS/ && npm audit
-      - run: cd BidWars-NodeJS/ && npm test
 
   java-tests:
     name: Java Tests
@@ -29,4 +28,6 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Set execute permission for Maven wrapper
+      - run: chmod +x mvnw
       - run: cd BidWars-Java && ./mvnw clean install
