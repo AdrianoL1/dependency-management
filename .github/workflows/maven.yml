@@ -28,6 +28,5 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Set execute permission for Maven wrapper
       - run: chmod +x mvnw
       - run: cd BidWars-Java && ./mvnw clean install
