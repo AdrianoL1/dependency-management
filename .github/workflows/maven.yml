@@ -28,5 +28,5 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - run: chmod +x mvnw
+      - run: cd BidWars-Java && chmod +x mvnw
       - run: cd BidWars-Java && ./mvnw clean install
